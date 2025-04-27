@@ -1,17 +1,18 @@
 import { Route, Routes } from "react-router-dom";
+import More from "./components/More";
 import Home from "./pages/Home";
-import "./App.css";
-
-
+import GetInTouch from "./components/GetInTouch";
 function App() {
   return (
-    <div className=" flex h-screen justify-between items-start w-full">
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>   
-      
-      
-    </div>
+   
+       <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/more" element={<More />} />
+          <Route path="/getintouch" element={<GetInTouch />} />
+        </Routes>
+      </div>
+    
   );
 }
 

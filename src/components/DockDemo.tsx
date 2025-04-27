@@ -8,7 +8,7 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 export function DockDemo() {
   return (
     <div className="relative hidden md:block mt-10">
-      <Dock iconMagnification={60} iconDistance={100}>
+      <Dock iconMagnification={60} iconDistance={100} className="bg-black/10 dark:bg-white/10">
         <DockIcon className="bg-black/10 dark:bg-white/10">
           <Icons.gitHub className="size-full" />
         </DockIcon>
