@@ -6,10 +6,8 @@ function More() {
     <div className="relative flex min-h-screen w-full flex-col overflow-hidden p-5 bg-gray-50 dark:bg-black">
       <NavBar />
       <div className="flex flex-col h-full w-full items-center justify-start px-2 md:px-2 mt-5">
-        <div className="flex items-center justify-center gap-2">
-          <h1 className="text-2xl md:text-4xl font-bold ">
-            Who am I?
-          </h1>
+        <div className="flex items-center justify-start gap-2 w-[58%]">
+          <h1 className="text-2xl md:text-4xl font-bold ">Who am I?</h1>
           <img
             src={Coding}
             alt="Profile"
@@ -17,15 +15,20 @@ function More() {
           />
         </div>
         <p className="mt-4 text-center md:text-left text-base md:text-xl font-normal text-gray-700 max-w-3xl dark:text-white">
-          I'm a <span className="font-semibold">22-year-old web developer</span> from Berlin. 
-          I recently completed my bachelor thesis on <span className="font-semibold">rendering strategies in React/Next.js</span> 
-          and now work full-time at a small company based in Berlin.
+          I'm a <span className="font-semibold">20-year-old web developer</span>{" "}
+          from India. I recently completed my bachelor thesis on{" "}
+          <span className="font-semibold">
+            rendering strategies in React.js
+          </span>
+          . I'm currently learning the{" "}
+          <span className="font-semibold">MERN stack</span> to enhance my
+          full-stack development skills.
         </p>
       </div>
       <div className="flex flex-col h-full w-full items-center justify-start px-2 md:px-2 mt-5">
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-start gap-2 w-[58%]">
           <h1 className="text-2xl md:text-4xl font-bold text-gray-800 dark:text-white">
-          My journey 
+            My journey
           </h1>
           <img
             src={Destination}
@@ -34,10 +37,10 @@ function More() {
           />
         </div>
         <p className="mt-4 text-center md:text-left text-base md:text-xl font-normal text-gray-700 max-w-3xl dark:text-white">
-        I've started my journey with studying computer science in 2021. Enjoy the timeline
+          I've started my journey with studying computer science in 2021. Enjoy
+          the timeline
         </p>
       </div>
-    
     </div>
   );
 }
