@@ -1,11 +1,5 @@
 "use client";
 
-import type {
-  GlobalOptions as ConfettiGlobalOptions,
-  CreateTypes as ConfettiInstance,
-  Options as ConfettiOptions,
-} from "canvas-confetti";
-import confetti from "canvas-confetti";
 import type { ReactNode } from "react";
 import React, {
   createContext,
@@ -16,8 +10,18 @@ import React, {
   useMemo,
   useRef,
 } from "react";
+import confetti, {
+  type GlobalOptions as ConfettiGlobalOptions,
+  type CreateTypes as ConfettiInstance,
+  type Options as ConfettiOptions,
+} from "canvas-confetti";
 
-import { Button, ButtonProps } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
+
+// Define your own ButtonProps
+import type { ButtonHTMLAttributes } from "react";
+
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
 type Api = {
   fire: (options?: ConfettiOptions) => void;
@@ -32,9 +36,8 @@ type Props = React.ComponentPropsWithRef<"canvas"> & {
 
 export type ConfettiRef = Api | null;
 
-const ConfettiContext = createContext<Api>({} as Api);
+const ConfettiContext = createContext<Api>({ fire: () => {} });
 
-// Define component first
 const ConfettiComponent = forwardRef<ConfettiRef, Props>((props, ref) => {
   const {
     options,
@@ -43,55 +46,33 @@ const ConfettiComponent = forwardRef<ConfettiRef, Props>((props, ref) => {
     children,
     ...rest
   } = props;
+
   const instanceRef = useRef<ConfettiInstance | null>(null);
 
-  const canvasRef = useCallback(
-    (node: HTMLCanvasElement) => {
-      if (node !== null) {
-        if (instanceRef.current) return;
-        instanceRef.current = confetti.create(node, {
-          ...globalOptions,
-          resize: true,
-        });
-      } else {
-        if (instanceRef.current) {
-          instanceRef.current.reset();
-          instanceRef.current = null;
-        }
-      }
-    },
-    [globalOptions],
-  );
+  const canvasRef = useCallback((node: HTMLCanvasElement | null) => {
+    if (node && !instanceRef.current) {
+      instanceRef.current = confetti.create(node, { ...globalOptions, resize: true });
+    } else if (!node && instanceRef.current) {
+      instanceRef.current.reset();
+      instanceRef.current = null;
+    }
+  }, [globalOptions]);
 
-  const fire = useCallback(
-    async (opts = {}) => {
-      try {
-        await instanceRef.current?.({ ...options, ...opts });
-      } catch (error) {
-        console.error("Confetti error:", error);
-      }
-    },
-    [options],
-  );
+  const fire = useCallback(async (opts = {}) => {
+    try {
+      await instanceRef.current?.({ ...options, ...opts });
+    } catch (error) {
+      console.error("Confetti fire error:", error);
+    }
+  }, [options]);
 
-  const api = useMemo(
-    () => ({
-      fire,
-    }),
-    [fire],
-  );
+  const api = useMemo(() => ({ fire }), [fire]);
 
   useImperativeHandle(ref, () => api, [api]);
 
   useEffect(() => {
     if (!manualstart) {
-      (async () => {
-        try {
-          await fire();
-        } catch (error) {
-          console.error("Confetti effect error:", error);
-        }
-      })();
+      fire();
     }
   }, [manualstart, fire]);
 
@@ -103,16 +84,13 @@ const ConfettiComponent = forwardRef<ConfettiRef, Props>((props, ref) => {
   );
 });
 
-// Set display name immediately
 ConfettiComponent.displayName = "Confetti";
 
-// Export as Confetti
 export const Confetti = ConfettiComponent;
 
 interface ConfettiButtonProps extends ButtonProps {
-  options?: ConfettiOptions &
-    ConfettiGlobalOptions & { canvas?: HTMLCanvasElement };
-  children?: React.ReactNode;
+  options?: ConfettiOptions & ConfettiGlobalOptions & { canvas?: HTMLCanvasElement };
+  children?: ReactNode;
 }
 
 const ConfettiButtonComponent = ({
@@ -125,6 +103,7 @@ const ConfettiButtonComponent = ({
       const rect = event.currentTarget.getBoundingClientRect();
       const x = rect.left + rect.width / 2;
       const y = rect.top + rect.height / 2;
+
       await confetti({
         ...options,
         origin: {
@@ -133,7 +112,7 @@ const ConfettiButtonComponent = ({
         },
       });
     } catch (error) {
-      console.error("Confetti button error:", error);
+      console.error("ConfettiButton error:", error);
     }
   };
 

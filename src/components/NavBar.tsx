@@ -2,6 +2,8 @@
 import { Link } from "react-router-dom";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "./ui/button";   
+import { ModeToggle } from "./mode-toggle";
+import { ThemeProvider } from "./theme-provider";
 
 function NavBar() {
 return (

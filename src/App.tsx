@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import GetInTouch from "./components/GetInTouch";
 function App() {
   return (
-   
        <div>
         <Routes>
           <Route path="/" element={<Home />} />

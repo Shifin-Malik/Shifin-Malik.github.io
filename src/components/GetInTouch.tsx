@@ -5,7 +5,7 @@ import { TextareaDisabled } from "./TextareaDisabled";
 import { Button } from "./ui/button";
     function GetInTouch() {
     return (
-        <div className="relative flex min-h-screen w-full flex-col overflow-hidden p-5 bg-gray-50">
+        <div className="relative flex min-h-screen w-full flex-col overflow-hidden p-5 bg-gray-50 dark:bg-black">
         <NavBar />
         <div className="flex flex-col h-full w-full items-center justify-start px-2 md:px-2 mt-5">
         <h1 className="text-2xl">contact request</h1>
