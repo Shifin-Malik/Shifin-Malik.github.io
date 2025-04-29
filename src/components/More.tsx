@@ -1,6 +1,7 @@
 import NavBar from "./NavBar";
 import Coding from "@/assets/coding.png";
 import Destination from "@/assets/destination.png";
+import { MarqueeDemo } from "./MarqueeDemo";
 function More() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-hidden p-5 bg-gray-50 dark:bg-black">
@@ -41,6 +42,7 @@ function More() {
           the timeline
         </p>
       </div>
+      <MarqueeDemo />
     </div>
   );
 }

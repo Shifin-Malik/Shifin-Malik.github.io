@@ -20,7 +20,7 @@ function NavBar() {
 
       {/* Center: Desktop Navigation */}
       <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-10">
-        {["Home", "Portfolio", "Resume", "About", "Contact"].map((item) => (
+        {["Home", "Portfolio", "About", "Contact"].map((item) => (
           <Link 
             key={item} 
             to={`/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`}
