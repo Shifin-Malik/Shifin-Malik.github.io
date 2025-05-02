@@ -8,7 +8,7 @@ import { Menu } from "lucide-react";
 
 function NavBar() {
   return (
-    <div className="md:flex items-center justify-between px-6 md:px-12 py-4 relative bg-white dark:bg-black w-full">
+    <div className="md:flex items-center justify-between px-6 md:px-12 py-4 relative bg-transparent dark:bg-transparent w-full">
       
       {/* Left Side (Desktop: Avatar) */}
       <Link to="/" className="hidden md:flex items-center hover:scale-105 transition-transform duration-300">

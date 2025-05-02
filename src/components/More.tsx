@@ -1,12 +1,14 @@
 import NavBar from "./NavBar";
 import Coding from "@/assets/coding.png";
 import Destination from "@/assets/destination.png";
-import { MarqueeDemo } from "./MarqueeDemo";
+import { Meteors } from "@/components/magicui/meteors";
+import { TimelineDemo } from "./TimelineDemo";
 function More() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-hidden p-5 bg-gray-50 dark:bg-black">
       <NavBar />
-      <div className="flex flex-col h-full w-full items-center justify-start px-2 md:px-2 mt-5">
+      <Meteors />
+       <div className="flex flex-col h-full w-full items-center justify-start px-2 md:px-2 mt-5">
         <div className="flex items-center justify-start gap-2 w-[58%]">
           <h1 className="text-2xl md:text-4xl font-bold ">Who am I?</h1>
           <img
@@ -42,7 +44,7 @@ function More() {
           the timeline
         </p>
       </div>
-      <MarqueeDemo />
+      <TimelineDemo />
     </div>
   );
 }
