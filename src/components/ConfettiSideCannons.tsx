@@ -37,7 +37,7 @@ export function ConfettiSideCannons() {
       <img  onClick={handleClick}
             src={BgImg}
             alt="Profile Image"
-            className="w-32 h-32 md:w-40 md:h-40 object-cover rotate-12 "
+            className="w-32 h-32 md:w-40 md:h-40 object-cover rotate-12 cursor-pointer "
           />
     </div>
   );

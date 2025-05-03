@@ -3,6 +3,8 @@ import Coding from "@/assets/coding.png";
 import Destination from "@/assets/destination.png";
 import { Meteors } from "@/components/magicui/meteors";
 import { TimelineDemo } from "./TimelineDemo";
+import { MarqueeDemo } from "./MarqueeDemo";
+
 function More() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-hidden p-5 bg-gray-50 dark:bg-black">
@@ -45,6 +47,18 @@ function More() {
         </p>
       </div>
       <TimelineDemo />
+       {/* Heading above Marquee */}
+            <div className="mt-20 mb-2 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold hover:text-[#67AE6E]">
+                Technologies I Work With
+              </h2>
+            </div>
+      
+            {/* Skills Marquee */}
+            <MarqueeDemo />
+            <h1 className="text-xl mt-8 text-black dark:text-gray-300 text-center hover:text-[#67AE6E]">
+          © 2025 Shifin Malik. All rights reserved.
+        </h1>
     </div>
   );
 }

@@ -1,9 +1,9 @@
-import { MarqueeDemo } from "./MarqueeDemo";
+import Pro1 from '../../src/assets/pro1.png'
 import NavBar from "./NavBar";
 
 function Portfolio() {
   return (
-    <>
+    <div className="p-5">
     <NavBar />
       <div className="mx-4 md:px-8 grid grid-cols-1 md:grid-cols-2 min-h-screen w-full pt-6 gap-x-6 gap-y-10">
         {/* Left Side: Text & Images */}
@@ -13,7 +13,7 @@ function Portfolio() {
             <h1 className="text-5xl font-semibold">Latest Projects</h1>
           </div>
           <img
-            src="https://hamzanaseem.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F6.459240aa.jpg&w=1080&q=75"
+           src={Pro1}
             alt="Project 1"
             className="w-full max-w-lg object-cover rounded-xl shadow-lg"
           />
@@ -37,18 +37,12 @@ function Portfolio() {
             className="w-full max-w-lg object-cover rounded-xl shadow-lg"
           />
         </div>
-      </div>
+          </div>
 
-      {/* Heading above Marquee */}
-      <div className="mt-20 mb-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold hover:text-[#67AE6E]">
-          Technologies I Work With
-        </h2>
-      </div>
-
-      {/* Skills Marquee */}
-      <MarqueeDemo />
-    </>
+          <h1 className="text-xl mt-8 text-black dark:text-gray-300 text-center hover:text-[#67AE6E]">
+          © 2025 Shifin Malik. All rights reserved.
+        </h1>
+    </div>
   );
 }
 
