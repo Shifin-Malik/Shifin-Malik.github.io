@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Dock, DockIcon } from "@/components/magicui/dock";
+import { Link } from "react-router-dom";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -12,42 +13,30 @@ export function DockDemo() {
         iconDistance={100}
         className="bg-black/10 dark:bg-white/10"
       >
-        <a
-          href="https://github.com/Shifin-Malik/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+       
           <DockIcon className="bg-black/10 dark:bg-white/10">
+          <Link to="https://github.com/Shifin-Malik/">
             <Icons.gitHub className="size-full" />
-          </DockIcon>
-        </a>
-        <a
-          href="https://www.reddit.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+            </Link>
+          </DockIcon>     
         <DockIcon className="bg-black/10 dark:bg-white/10">
+          <Link to="https://www.reddit.com/">
           <Icons.reddit className="size-full" />
+          </Link>
         </DockIcon>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/shifin-malik/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+       
           <DockIcon className="bg-black/10 dark:bg-white/10">
+          <Link to="https://www.linkedin.com/in/shifin-malik/">
             <Icons.notion className="size-full" />
+          </Link>
           </DockIcon>
-        </a>
-        <a
-          href="https://x.com/Shifinmalik"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+       
           <DockIcon className="bg-black/10 dark:bg-white/10">
+          <Link to="https://x.com/Shifinmalik">
             <Icons.twitter className="size-full" />
+            </Link>
           </DockIcon>
-        </a>
+       
       </Dock>
     </div>
   );

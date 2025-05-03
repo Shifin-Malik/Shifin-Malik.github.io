@@ -41,7 +41,7 @@ function Portfolio() {
 
       {/* Heading above Marquee */}
       <div className="mt-20 mb-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold">
+        <h2 className="text-3xl md:text-4xl font-bold hover:text-[#67AE6E]">
           Technologies I Work With
         </h2>
       </div>

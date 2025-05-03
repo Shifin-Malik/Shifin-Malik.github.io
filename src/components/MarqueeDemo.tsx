@@ -52,7 +52,7 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative w-28 h-28 md:h-36 md:w-36 cursor-pointer overflow-hidden rounded-2xl border p-4",
+        "relative w-20 h-20 md:h-28 md:w-28 cursor-pointer overflow-hidden rounded-2xl border p-4",
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
@@ -60,7 +60,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-col items-center justify-center gap-1 w-full">
-        <img className="rounded-full w-14 h-14 md:w-20 md:h-20" width="96" height="96" alt={name} src={img} />
+        <img className="rounded-full w-8 h-8 md:w-14 md:h-14" width="96" height="96" alt={name} src={img} />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
@@ -73,7 +73,7 @@ const ReviewCard = ({
 
 export function MarqueeDemo() {
   return (
-    <div className="mt-10 relative flex  flex-col items-center justify-center overflow-hidden md:mx-20 mx-4">
+    <div className="mt-10 relative flex  flex-col items-center justify-center overflow-hidden md:mx-12 mx-1">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.name} {...review} />
