@@ -7,6 +7,8 @@ import REACTJS from '@/assets/reactjs.png';
 import TYPESCRIPT from '@/assets/typescript.png';
 import REDUX from '@/assets/reduxlogo.png';
 import TAILWINDCSS from '@/assets/tailwindcss.png';
+import MONGODB from '@/assets/mongodb.png';
+import EXPRESS from '@/assets/express.png'
 const reviews = [
   {
     name: "HTML",
@@ -37,8 +39,16 @@ const reviews = [
     name: "REDUX",
     img: REDUX,
   },
+  {
+    name: "MONGODB",
+    img: MONGODB,
+  },
+  {
+    name: "EXPRESS",
+    img: EXPRESS,
+  },
 ];
-
+  
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 

@@ -1,4 +1,5 @@
 import Pro1 from '../../src/assets/pro1.png'
+import ProNot from '../assets/ProNot.png'
 import NavBar from "./NavBar";
 
 function Portfolio() {
@@ -15,27 +16,19 @@ function Portfolio() {
           <img
            src={Pro1}
             alt="Project 1"
-            className="w-full max-w-lg object-cover rounded-xl shadow-lg"
+            className="w-full max-w-lg object-cover rounded-xl shadow-lg cursor-pointer"
           />
-          <img
-            src="https://hamzanaseem.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F7.cccf8d95.png&w=1080&q=75"
-            alt="Project 2"
-            className="w-full max-w-lg object-cover rounded-xl shadow-lg"
-          />
+         
         </div>
 
         {/* Right Side: Images */}
         <div className="flex flex-col justify-center items-center px-4 md:px-10 space-y-6">
           <img
-            src="https://hamzanaseem.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2.6496b8e7.jpg&w=1080&q=75"
+            src={ProNot}
             alt="Project 3"
             className="w-full max-w-lg object-cover rounded-xl shadow-lg"
           />
-          <img
-            src="https://hamzanaseem.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F4.cd041498.jpg&w=1080&q=75"
-            alt="Project 4"
-            className="w-full max-w-lg object-cover rounded-xl shadow-lg"
-          />
+         
         </div>
           </div>
 
