@@ -1,5 +1,5 @@
 import { Textareaa } from "@/components/Textareaa"
  
 export function TextareaDisabled() {
-  return <Textareaa  placeholder="" />
+  return <Textareaa  placeholder="example@gmail.com" />
 }
