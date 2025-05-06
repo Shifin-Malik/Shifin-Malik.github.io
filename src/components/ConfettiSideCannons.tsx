@@ -2,7 +2,7 @@ import confetti from "canvas-confetti";
 import BgImg from "@/assets/bgimg.png";
 export function ConfettiSideCannons() {
   const handleClick = () => {
-    const end = Date.now() + 3 * 1000; // 3 seconds
+    const end = Date.now() + 3 * 500; // 3 seconds
     const colors = ["#a786ff", "#67AE6E", "#eca184", "#f8deb1"];
 
     const frame = () => {
@@ -11,7 +11,7 @@ export function ConfettiSideCannons() {
       confetti({
         particleCount: 2,
         angle: 60,
-        spread: 55,
+        spread: 50,
         startVelocity: 60,
         origin: { x: 0, y: 0.5 },
         colors: colors,
@@ -19,7 +19,7 @@ export function ConfettiSideCannons() {
       confetti({
         particleCount: 2,
         angle: 120,
-        spread: 55,
+        spread: 50,
         startVelocity: 60,
         origin: { x: 1, y: 0.5 },
         colors: colors,
