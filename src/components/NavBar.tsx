@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import PROIMG from "../assets/img.png";
-
+import { IoMdCloudDownload } from "react-icons/io";
 function NavBar() {
   const location = useLocation();
   const [active, setActive] = useState("");
@@ -57,13 +57,14 @@ function NavBar() {
 
         {/* Right: Resume Button */}
         <Link to="/resume">
-          <Button
-            variant="outline"
-            className="w-32 h-10 text-sm font-semibold bg-black text-white dark:bg-white dark:text-black hover:bg-[#67AE6E] dark:hover:bg-[#67AE6E] hover:text-white dark:hover:text-white transition-colors"
-          >
-            Resume
-          </Button>
-        </Link>
+  <Button
+    variant="outline"
+    className="w-32 h-10 text-sm font-semibold bg-black text-white dark:bg-white dark:text-black hover:bg-[#67AE6E] dark:hover:bg-[#67AE6E] hover:text-white dark:hover:text-white transition-colors flex items-center justify-center gap-2"
+  >
+    Resume
+    <IoMdCloudDownload className="text-base" />
+  </Button>
+</Link>
       </div>
 
       {/* Mobile View: Avatar on Left, Name in Center, Menu on Right */}
@@ -84,8 +85,8 @@ function NavBar() {
         <div className="flex items-center justify-end">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="p-2">
-                <Menu className="h-9 w-9 text-black dark:text-white transition-transform hover:scale-125" />
+              <Button variant="ghost" size="icon" className="">
+                <Menu  className="h-12 w-12 text-black dark:text-white transition-transform hover:scale-125" />
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="p-8 bg-white dark:bg-black">

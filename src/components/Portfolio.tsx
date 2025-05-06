@@ -6,6 +6,7 @@ import { SmoothCursorDemo } from "./SmoothCursorDemo";
 import { ThreeDCardDemo2 } from "./ThreeDCardDemo2";
 import { ThreeDCardDemo3 } from "./ThreeDCardDemo3";
 import { ThreeDCardDemo4 } from "./ThreeDCardDemo4";
+import { ThreeDCardDemo5 } from "./ThreeDCardDemo5";
 function Portfolio() {
   return (
     <div className="min-h-screen w-full bg-gray-50 dark:bg-black">
@@ -24,13 +25,14 @@ function Portfolio() {
           {/* Project 1 - Image */}
           <div className="">
           <ThreeDCardDemo />
-          <ThreeDCardDemo3 />
+            <ThreeDCardDemo1 />
+            <ThreeDCardDemo2 />
           </div>
           {/* Project 2 - Video */}
           <div className="flex flex-col justify-start items-start">
-            <ThreeDCardDemo1 />
-            <ThreeDCardDemo2 />
             <ThreeDCardDemo4 />
+          <ThreeDCardDemo3 />
+          <ThreeDCardDemo5 />
           </div>
           
          
