@@ -5,9 +5,10 @@ import { useLocation, Link } from "react-router-dom";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+
 import PROIMG from "../assets/img.png";
 import { IoMdCloudDownload } from "react-icons/io";
+import { Menu } from "lucide-react";
 import RESUME from "../assets/resume.pdf";
 function NavBar() {
   const location = useLocation();
