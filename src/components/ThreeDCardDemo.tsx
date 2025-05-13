@@ -1,6 +1,7 @@
 "use client";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import DOC from '../../src/assets/Doctimeimg.png';
+import { Link } from "react-router-dom";
 
 export function ThreeDCardDemo() {
   return (
@@ -46,14 +47,15 @@ export function ThreeDCardDemo() {
           >
             View on GitHub →
           </CardItem>
+         <Link to="https://doc-time-frontend1.vercel.app/">
           <CardItem
             translateZ={20}
             as="button"
-            href="https://doc-time-frontend1.vercel.app/"
             className="px-4 py-2 rounded-lg bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
           >
             Try Demo
           </CardItem>
+         </Link>
         </div>
       </CardBody>
     </CardContainer>

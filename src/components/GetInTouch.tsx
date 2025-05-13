@@ -12,12 +12,12 @@ function GetInTouch() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-hidden bg-gray-50 dark:bg-black">
       <NavBar />
-
+       
       <div className="flex flex-col items-center justify-start w-full px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 dark:text-white mb-8">
           Contact Request
         </h1>
-
+    
         <form
           action="https://formsubmit.co/shifinmalik46@gmail.com"
           method="POST"

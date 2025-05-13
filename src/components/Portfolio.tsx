@@ -7,6 +7,7 @@ import { ThreeDCardDemo2 } from "./ThreeDCardDemo2";
 import { ThreeDCardDemo3 } from "./ThreeDCardDemo3";
 import { ThreeDCardDemo4 } from "./ThreeDCardDemo4";
 import { ThreeDCardDemo5 } from "./ThreeDCardDemo5";
+
 function Portfolio() {
   return (
     <div className="min-h-screen w-full bg-gray-50 dark:bg-black">
@@ -45,6 +46,7 @@ function Portfolio() {
           </p>
         </div>
       </div>
+      
     </div>
   );
 }

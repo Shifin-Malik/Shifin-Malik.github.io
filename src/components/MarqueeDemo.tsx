@@ -9,6 +9,9 @@ import REDUX from '@/assets/reduxlogo.png';
 import TAILWINDCSS from '@/assets/tailwindcss.png';
 import MONGODB from '@/assets/mongodb.png';
 import EXPRESS from '@/assets/express.png'
+import SVELTE from '@/assets/svelte.png'
+import NODEJS from '@/assets/nodejs.png'
+import NEXTJS from '@/assets/nextjs (1).png'
 const reviews = [
   {
     name: "HTML",
@@ -47,7 +50,20 @@ const reviews = [
     name: "EXPRESS",
     img: EXPRESS,
   },
+  {
+    name: "SVELTE",
+    img: SVELTE,
+  },
+  {
+    name: "NODEJS",
+    img: NODEJS,
+  },
+  {
+    name: "NEXTJS",
+    img: NEXTJS,
+  },
 ];
+
   
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
