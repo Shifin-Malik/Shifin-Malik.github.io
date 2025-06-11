@@ -17,7 +17,7 @@ A modern and responsive developer portfolio built using **React**, **Vite**, and
 
 ## 📸 Preview
 
-![Portfolio Preview](./public/preview.png)
+[![Portfolio Preview](./public/preview.png)](https://shifinmalik.me/)
 
 ---
 
