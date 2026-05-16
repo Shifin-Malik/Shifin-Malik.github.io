@@ -2,14 +2,16 @@
 
 import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
-import PROIMG from "../../public/img1.png";
+// Use a public path for the profile image to avoid TypeScript import errors
+const PROIMG = "/me.jpeg";
 import { IoMdCloudDownload } from "react-icons/io";
 import { Menu } from "lucide-react";
-import RESUME from "../assets/resume.pdf";
+// Use a public path for the resume PDF to avoid TypeScript import errors
+const RESUME = "/SHIFIN MALIK P - CV - FULL STACK.pdf";
 function NavBar() {
   const location = useLocation();
   const [active, setActive] = useState("");
@@ -31,8 +33,8 @@ function NavBar() {
           to="/"
           className="flex items-center hover:scale-105 transition-transform"
         >
-          <Avatar>
-            <AvatarImage src={PROIMG} alt="Profile" />
+          <Avatar className="w-14 h-14 border border-zinc-700">
+            <AvatarImage src={PROIMG} alt="Profile" className="object-cover" />
           </Avatar>
         </Link>
 
