@@ -6,7 +6,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-import PROIMG from "../assets/imgage.png";
+import PROIMG from "../../public/img1.png";
 import { IoMdCloudDownload } from "react-icons/io";
 import { Menu } from "lucide-react";
 import RESUME from "../assets/resume.pdf";
