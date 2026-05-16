@@ -1,8 +1,6 @@
-
 import NavBar from "./NavBar";
-import { ThreeDCardDemo } from './ThreeDCardDemo';
-import { ThreeDCardDemo1 } from './ThreeDCardDemo1';
 import { SmoothCursorDemo } from "./SmoothCursorDemo";
+import { ThreeDCardDemo1 } from "./ThreeDCardDemo1";
 import { ThreeDCardDemo2 } from "./ThreeDCardDemo2";
 import { ThreeDCardDemo3 } from "./ThreeDCardDemo3";
 import { ThreeDCardDemo4 } from "./ThreeDCardDemo4";
@@ -14,29 +12,31 @@ function Portfolio() {
       <NavBar />
 
       <div className="px-4 md:px-10">
-      <SmoothCursorDemo />
+        <SmoothCursorDemo />
+
+        {/* Heading */}
         <div className="mb-5 md:mb-10 text-center md:w-[50%]">
           <h2 className="text-xl text-[#67AE6E] font-medium">Portfolio</h2>
+
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mt-2">
             Latest Projects
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full justify-center ">
-          {/* Project 1 - Image */}
-          <div className="">
-          <ThreeDCardDemo />
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-5">
+          {/* Left Side */}
+          <div className="flex flex-col">
             <ThreeDCardDemo1 />
             <ThreeDCardDemo2 />
+            <ThreeDCardDemo5 />
           </div>
-          {/* Project 2 - Video */}
-          <div className="flex flex-col justify-start items-start">
+
+          {/* Right Side */}
+          <div className="flex flex-col">
+            <ThreeDCardDemo3 />
             <ThreeDCardDemo4 />
-          <ThreeDCardDemo3 />
-          <ThreeDCardDemo5 />
           </div>
-          
-         
         </div>
 
         {/* Footer */}
@@ -46,7 +46,6 @@ function Portfolio() {
           </p>
         </div>
       </div>
-      
     </div>
   );
 }

@@ -11,7 +11,7 @@ const PROIMG = "/me.jpeg";
 import { IoMdCloudDownload } from "react-icons/io";
 import { Menu } from "lucide-react";
 // Use a public path for the resume PDF to avoid TypeScript import errors
-const RESUME = "/SHIFIN MALIK P - CV - FULL STACK.pdf";
+import RESUME from '../assets/SHIFIN MALIK P - CV - FULL STACK.pdf'
 function NavBar() {
   const location = useLocation();
   const [active, setActive] = useState("");

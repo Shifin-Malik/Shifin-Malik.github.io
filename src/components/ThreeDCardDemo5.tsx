@@ -1,6 +1,6 @@
 "use client";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import FOODIE from "../assets/foodie.mp4"; // Keep this if it's still the correct video preview
+import KALARAVU from "../assets/kalaravu.mp4";
 import { Link } from "react-router-dom";
 
 export function ThreeDCardDemo5() {
@@ -12,7 +12,7 @@ export function ThreeDCardDemo5() {
           translateZ="50"
           className="text-xl font-bold text-neutral-600 dark:text-white"
         >
-          Foodie – Food Delivery Website
+          Kalaravu
         </CardItem>
 
         {/* Description */}
@@ -21,41 +21,40 @@ export function ThreeDCardDemo5() {
           translateZ="60"
           className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
         >
-          Foodie is a modern, static ReactJS food delivery website with a clean
-          UI. Designed to showcase restaurants, menus, and promotions, it offers
-          a seamless user experience across all devices.
+          Kalaravu is a SvelteKit-based college arts scoreboard that tracks and
+          displays event scores in real-time. It’s designed to be lightweight,
+          responsive, and perfect for cultural festivals and competitions.
         </CardItem>
 
-        {/* Video */}
+        {/* Image */}
         <CardItem translateZ="100" className="w-full mt-4">
           <video
-            src={FOODIE}
+            src={KALARAVU}
             autoPlay
             loop
             muted
             playsInline
-            className="w-full  max-w-xl object-cover rounded-2xl shadow-xl transition-transform duration-300 hover:scale-[1.02]"
+            className="w-full h-96 max-w-xl object-cover rounded-2xl shadow-xl transition-transform duration-300 hover:scale-[1.02]"
           >
             Your browser does not support the video tag.
           </video>
         </CardItem>
 
         {/* Buttons */}
-        <div className="flex justify-between items-center mt-4 ">
+        <div className="flex justify-between items-center mt-4">
           <CardItem
             translateZ={20}
             as="a"
-            href="https://github.com/Shifin-Malik/Foodie" // ← update with actual GitHub repo
-            target="_blank"
+            href="https://github.com/Shifin-Malik/Kalaravu-Nasra-Arts-Fest-2k24"
+            target="__blank"
             className="px-4 py-2 rounded-lg text-xs font-normal dark:text-white"
           >
             View on GitHub →
           </CardItem>
-          <Link to="https://foodie-hub-six.vercel.app/">
+          <Link to="https://kalaravu.vercel.app/">
             <CardItem
               translateZ={20}
-              as="a"
-              target="_blank"
+              as="button"
               className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
             >
               Try Demo

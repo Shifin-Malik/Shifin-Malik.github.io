@@ -1,17 +1,19 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
-import HTML from '@/assets/html.png';
-import CSS from '@/assets/css.png';
-import JS from '@/assets/js.png';
-import REACTJS from '@/assets/reactjs.png';
-import TYPESCRIPT from '@/assets/typescript.png';
-import REDUX from '@/assets/reduxlogo.png';
-import TAILWINDCSS from '@/assets/tailwindcss.png';
-import MONGODB from '@/assets/mongodb.png';
-import EXPRESS from '@/assets/express.png'
-import SVELTE from '@/assets/svelte.png'
-import NODEJS from '@/assets/nodejs.png'
-import NEXTJS from '@/assets/nextjs (1).png'
+import HTML from "@/assets/html.png";
+import CSS from "@/assets/css.png";
+import JS from "@/assets/js.png";
+import REACTJS from "@/assets/reactjs.png";
+import TYPESCRIPT from "@/assets/typescript.png";
+import REDUX from "@/assets/reduxlogo.png";
+import TAILWINDCSS from "@/assets/tailwindcss.png";
+import MONGODB from "@/assets/mongodb.png";
+import EXPRESS from "@/assets/express.png";
+import SVELTE from "@/assets/svelte.png";
+import NODEJS from "@/assets/nodejs.png";
+import NEXTJS from "@/assets/nextjs (1).png";
+import DOCKER from "@/assets/docker.png";
+import REDIS from "@/assets/redis.png";
 const reviews = [
   {
     name: "HTML",
@@ -62,19 +64,20 @@ const reviews = [
     name: "NEXTJS",
     img: NEXTJS,
   },
+  {
+    name: "DOCKER",
+    img: DOCKER,
+  },
+  {
+    name: "REDIS",
+    img: REDIS,
+  },
 ];
 
-  
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
-const ReviewCard = ({
-  img,
-  name,
-}: {
-  img: string;
-  name: string;
-}) => {
+const ReviewCard = ({ img, name }: { img: string; name: string }) => {
   return (
     <figure
       className={cn(
@@ -86,7 +89,13 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-col items-center justify-center gap-1 w-full">
-        <img className="rounded-full w-8 h-8 md:w-14 md:h-14" width="96" height="96" alt={name} src={img} />
+        <img
+          className="rounded-full w-8 h-8 md:w-14 md:h-14"
+          width="96"
+          height="96"
+          alt={name}
+          src={img}
+        />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}

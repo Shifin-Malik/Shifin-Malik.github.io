@@ -4,6 +4,16 @@ import { Timeline } from "@/components/ui/timeline";
 export function TimelineDemo() {
   const data = [
     {
+  title: "End 2025",
+  content: (
+    <div>
+      <h1 className="text-xs md:text-lg font-normal text-neutral-800 dark:text-neutral-200">
+        In August 2025, I joined Bridgeon Solutions as a MERN Stack Developer Intern, where I worked on scalable full-stack web applications using the MERN stack. I developed secure RESTful APIs with JWT authentication and role-based authorization, implemented real-time messaging and live presence tracking using Socket.IO and Redis, built responsive React.js interfaces, and deployed applications using Docker, Vercel, and Render while optimizing performance and scalability. I also collaborated with team members using Git and GitHub for efficient workflow management.
+      </h1>
+    </div>
+  ),
+},
+    {
       title: "early 2025",
       content: (
         <div>
